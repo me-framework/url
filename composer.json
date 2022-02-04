@@ -1,0 +1,26 @@
+{
+    "name": "me-framework/database",
+    "description": "Me Framework Url Manager",
+    "keywords": ["me", "framework", "url"],
+    "homepage": "https://www.meframework.ir/",
+    "type": "library",
+    "license": "Apache-2.0",
+    "minimum-stability": "dev",
+    "authors": [
+        {
+            "name": "Hossein Najafi",
+            "email": "hnajafi1994@gmail.com",
+            "homepage": "https://www.hosseinnajafi.ir/",
+            "role": "Founder and project lead"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "me-framework/core": "main-dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "me\\url\\": "src/"
+        }
+    }
+}
