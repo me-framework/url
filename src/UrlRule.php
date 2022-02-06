@@ -3,13 +3,13 @@ namespace me\url;
 use me\core\Component;
 class UrlRule extends Component {
     /**
+     * @var array Verbs: GET, POST, ...
+     */
+    public $verb;
+    /**
      * @var string Pattern
      */
     public $pattern;
-    /**
-     * @var string|array Verb(s)
-     */
-    public $verb;
     /**
      * @var string Route
      */
