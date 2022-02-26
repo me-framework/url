@@ -29,7 +29,7 @@ class UrlRule extends Component {
     /**
      * 
      */
-    public function init() {
+    protected function init() {
         parent::init();
         if (!is_null($this->verb)) {
             if (is_array($this->verb)) {

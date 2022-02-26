@@ -15,7 +15,7 @@ class UrlManager extends Component {
     /**
      * 
      */
-    public function init() {
+    protected function init() {
         parent::init();
         $this->rules = $this->buildRules($this->rules);
     }
