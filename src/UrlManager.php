@@ -2,7 +2,7 @@
 namespace me\url;
 use Exception;
 use me\core\Component;
-use me\core\components\Container;
+use me\core\Container;
 class UrlManager extends Component {
     /**
      * @var \me\url\UrlRule[] Url Rules
