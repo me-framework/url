@@ -1,8 +1,9 @@
 <?php
 namespace me\url;
-use Exception;
 use me\core\Component;
 use me\core\Container;
+use me\helpers\ArrayHelper;
+use me\exceptions\Exception;
 class UrlManager extends Component {
     /**
      * @var \me\url\UrlRule[] Url Rules
@@ -48,7 +49,9 @@ class UrlManager extends Component {
             $rule['pattern'] = $pattern;
         }
         if (is_array($rule)) {
-            $rule = Container::build(array_merge($this->ruleConfig, $rule));
+            $config = array_merge($this->ruleConfig, $rule);
+            $class  = ArrayHelper::Remove($config, 'class');
+            $rule   = Container::build($class, $config);
         }
         if (!($rule instanceof UrlRule)) {
             throw new Exception('Url rule class must implement UrlRule.');
